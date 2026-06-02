@@ -2,28 +2,36 @@ import SiteNav from "@/components/SiteNav";
 import { Link, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import logo from "@/assets/qfusion-logo.png";
 import { getService, services } from "@/data/services";
 import NotFound from "./NotFound";
-import { useEffect } from "react";
+
+const SITE = "https://qfusion.co.uk";
 
 const Service = () => {
   const { slug = "" } = useParams();
   const service = getService(slug);
 
-  useEffect(() => {
-    if (service) {
-      document.title = `${service.name} – QFusion Visitor Services`;
-      const meta = document.querySelector('meta[name="description"]');
-      if (meta) meta.setAttribute("content", `${service.name}: ${service.tagline} — part of the QFusion Customer Flow Platform.`);
-    }
-  }, [service]);
-
   if (!service) return <NotFound />;
   const Icon = service.icon;
+  const pageTitle = `${service.name} – QFusion Visitor Services`;
+  const pageDesc = `${service.name}: ${service.tagline} — part of the QFusion Customer Flow Platform for UK organisations.`;
+  const pageUrl = `${SITE}/visitor-services/${service.slug}`;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Helmet htmlAttributes={{ lang: "en-GB" }}>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDesc} />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDesc} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDesc} />
+      </Helmet>
       <header className="sticky top-0 z-50 glass border-b border-border/60">
         <div className="container flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
