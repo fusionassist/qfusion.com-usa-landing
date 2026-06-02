@@ -8,9 +8,9 @@ type Props = {
 
 const SITE = "https://qfusion.co.uk";
 
-const TITLE = "QFusion UK – Queue Management for Hospitals, Banks & Councils";
+const TITLE = "QFusion UK – Queue Management for NHS, Banks & Councils";
 const DESCRIPTION =
-  "QFusion UK is the customer flow and queue management platform for UK hospitals, NHS trusts, banks, local councils and public services. Cut wait times across the United Kingdom — book a demo.";
+  "QFusion UK — queue management and customer flow for NHS trusts, banks and UK councils. Cut wait times across the United Kingdom. Book a demo.";
 
 const SeoHead = (_props: Props) => {
   const url = `${SITE}/`;
