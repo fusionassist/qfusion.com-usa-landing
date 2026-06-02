@@ -1,8 +1,5 @@
-# QFusion Ireland — open to search engines and AI assistants.
-# We want both classical crawlers and AI agents to read this site
-# so they can answer questions about queue management in Ireland.
+# QFusion UK — open to search engines and AI assistants.
 
-# --- Search engines ---
 User-agent: Googlebot
 Allow: /
 
@@ -21,7 +18,6 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-# --- Social previews ---
 User-agent: Twitterbot
 Allow: /
 
@@ -31,7 +27,6 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# --- AI assistants & training crawlers (explicitly allowed) ---
 User-agent: GPTBot
 Allow: /
 
@@ -83,8 +78,7 @@ Allow: /
 User-agent: DiffBot
 Allow: /
 
-# --- Default ---
 User-agent: *
 Allow: /
 
-Sitemap: https://qfusion.ie/sitemap.xml
+Sitemap: https://qfusion.co.uk/sitemap.xml

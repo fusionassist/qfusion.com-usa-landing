@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import LangSwitch from "@/components/LangSwitch";
 import SeoHead from "@/components/SeoHead";
 
 import logo from "@/assets/qfusion-logo.png";
@@ -16,6 +15,16 @@ const APP_SITE = "https://qfusion.app";
 const CONTACT_URL = `${APP_SITE}/#contact`;
 const DEMO_URL = `${APP_SITE}/#contact`;
 
+const UkFlag = () => (
+  <span aria-hidden className="inline-flex h-3 w-[18px] overflow-hidden rounded-[1px] border border-border/60 bg-[#012169] relative">
+    {/* simplified Union Jack */}
+    <span className="absolute inset-0" style={{
+      background:
+        "linear-gradient(45deg, transparent 45%, #fff 45%, #fff 55%, transparent 55%), linear-gradient(-45deg, transparent 45%, #fff 45%, #fff 55%, transparent 55%), linear-gradient(#fff, #fff) center/100% 28% no-repeat, linear-gradient(#fff, #fff) center/28% 100% no-repeat, linear-gradient(#C8102E, #C8102E) center/100% 14% no-repeat, linear-gradient(#C8102E, #C8102E) center/14% 100% no-repeat, #012169",
+    }} />
+  </span>
+);
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -25,16 +34,11 @@ const Index = () => {
       <header className="sticky top-0 z-50 glass border-b border-border/60">
         <div className="container flex h-16 items-center justify-between">
           <a href="#top" className="flex items-center gap-2">
-            <img src={logo} alt="QFusion Ireland – Customer Flow Platform" className="h-8 w-auto" />
+            <img src={logo} alt="QFusion UK – Customer Flow Platform" className="h-8 w-auto" />
             <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-              <span aria-hidden className="inline-flex h-3 w-[18px] overflow-hidden rounded-[1px] border border-border/60">
-                <span className="flex-1 bg-[#169B62]" />
-                <span className="flex-1 bg-white" />
-                <span className="flex-1 bg-[#FF883E]" />
-              </span>
-              Ireland · Éire
+              <UkFlag />
+              United Kingdom
             </span>
-
           </a>
           <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-muted-foreground">
             <a href="#features" className="hover:text-foreground transition-colors">Features</a>
@@ -45,7 +49,6 @@ const Index = () => {
             </a>
           </nav>
           <div className="flex items-center gap-2">
-            <LangSwitch current="en" />
             <Button variant="ghost" size="sm" asChild className="hidden lg:inline-flex">
               <a href={CONTACT_URL} target="_blank" rel="noopener">Talk to sales</a>
             </Button>
@@ -65,15 +68,15 @@ const Index = () => {
             <div className="animate-fade-up">
               <div className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/70 backdrop-blur px-3 py-1 text-xs font-medium text-muted-foreground">
                 <span className="h-2 w-2 rounded-full gradient-brand animate-pulse-dot" />
-                Fáilte · Customer Flow Platform for Ireland
+                Customer Flow Platform for the United Kingdom
               </div>
               <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05]">
-                Shorter queues. <span className="text-gradient">Happier visitors.</span> Built for Ireland.
+                Shorter queues. <span className="text-gradient">Happier visitors.</span> Built for the UK.
               </h1>
               <p className="mt-6 text-lg text-muted-foreground max-w-xl">
                 QFusion is the all-in-one <strong className="text-foreground">Queue Management System</strong> trusted by
-                Irish hospitals, banks, county councils and public services — cutting wait times and bringing every
-                visitor journey under one cloud platform, supported locally from Ireland.
+                UK hospitals, NHS trusts, banks, local councils and public services — cutting wait times and bringing
+                every visitor journey under one cloud platform, supported locally from London.
               </p>
               <div className="mt-6 grid sm:grid-cols-3 gap-3 max-w-xl">
                 <Stat value="-40%" label="Wait times" />
@@ -90,17 +93,12 @@ const Index = () => {
               </div>
               <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2"><Cloud className="h-4 w-4" /> Cloud-based</div>
-                <div className="flex items-center gap-2"><Shield className="h-4 w-4" /> GDPR compliant</div>
+                <div className="flex items-center gap-2"><Shield className="h-4 w-4" /> UK GDPR compliant</div>
                 <div className="flex items-center gap-2"><Zap className="h-4 w-4" /> Real-time</div>
                 <div className="flex items-center gap-2">
-                  <span aria-hidden className="inline-flex h-3 w-[18px] overflow-hidden rounded-[1px] border border-border/60">
-                    <span className="flex-1 bg-[#169B62]" />
-                    <span className="flex-1 bg-white" />
-                    <span className="flex-1 bg-[#FF883E]" />
-                  </span>
-                  Irish support team
+                  <UkFlag />
+                  UK support team
                 </div>
-
               </div>
             </div>
             <div className="relative animate-fade-up" style={{ animationDelay: "150ms" }}>
@@ -111,7 +109,7 @@ const Index = () => {
               <FloatingCard className="absolute -left-4 top-10 hidden sm:flex animate-float" style={{ animationDelay: "0.4s" }}>
                 <div className="h-9 w-9 rounded-lg gradient-brand grid place-items-center text-primary-foreground font-bold">A</div>
                 <div>
-                  <div className="text-xs text-muted-foreground">Anois ag freastal</div>
+                  <div className="text-xs text-muted-foreground">Now serving</div>
                   <div className="font-semibold">Ticket A-127</div>
                 </div>
               </FloatingCard>
@@ -131,16 +129,16 @@ const Index = () => {
       <section id="features" className="pt-8 pb-20 md:pt-10 md:pb-28">
         <div className="container">
           <div className="max-w-2xl">
-            <Eyebrow>Gnéithe · Features</Eyebrow>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold">Everything you need, in one Irish-supported platform.</h2>
+            <Eyebrow>Features</Eyebrow>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold">Everything you need, in one UK-supported platform.</h2>
             <p className="mt-4 text-muted-foreground text-lg">
-              One cloud system for tickets, appointments, kiosks, displays and feedback — with multilingual UI
-              including Gaeilge.
+              One cloud system for tickets, appointments, kiosks, displays and feedback — purpose-built for UK
+              hospitals, councils and high-street brands.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3 text-sm">
               <span className="text-muted-foreground">Call us on</span>
-              <a href="tel:+353449672855" className="font-semibold text-foreground hover:text-primary transition-colors">
-                +353 44 967 2855
+              <a href="tel:+442033186379" className="font-semibold text-foreground hover:text-primary transition-colors">
+                +44 203 3186379
               </a>
               <span className="text-muted-foreground">or</span>
               <Button size="sm" variant="brand" asChild>
@@ -159,9 +157,9 @@ const Index = () => {
             <Feature icon={ClipboardList} title="Reception & Check-In"
               desc="Self-service kiosks for visitor check-in and instant staff notifications." />
             <Feature icon={Star} title="Customer Feedback"
-              desc="Post-service surveys in English & Gaeilge to improve every visit." />
+              desc="Post-service surveys to improve every visit." />
             <Feature icon={MonitorSmartphone} title="Live Displays"
-              desc="Branded calling screens with bilingual call-outs." />
+              desc="Branded calling screens with clear audio and on-screen call-outs." />
           </div>
           <div className="mt-8">
             <a href={`${APP_SITE}/#features`} target="_blank" rel="noopener"
@@ -172,24 +170,24 @@ const Index = () => {
         </div>
       </section>
 
-      {/* SECTORS — Ireland */}
+      {/* SECTORS — UK */}
       <section id="sectors" className="py-20 md:py-28 bg-secondary/40 border-y border-border">
         <div className="container">
           <div className="max-w-2xl">
-            <Eyebrow>Earnálacha · Sectors</Eyebrow>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold">Designed for Irish public & private services.</h2>
+            <Eyebrow>Sectors</Eyebrow>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold">Designed for UK public &amp; private services.</h2>
             <p className="mt-4 text-muted-foreground text-lg">
-              From acute hospitals to county council offices, QFusion brings order to every visitor journey
-              across Ireland.
+              From NHS trusts to local council offices, QFusion brings order to every visitor journey across the
+              United Kingdom.
             </p>
           </div>
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {[
-              { icon: Stethoscope, name: "Hospitals", tagline: "Calmer waiting rooms, faster patient flow.", href: `${APP_SITE}/visitor-journey/healthcare` },
-              { icon: HeartPulse, name: "Healthcare", tagline: "GP clinics, outpatient & primary care.", href: `${APP_SITE}/visitor-journey/healthcare` },
+              { icon: Stethoscope, name: "Hospitals & NHS", tagline: "Calmer waiting rooms, faster patient flow.", href: `${APP_SITE}/visitor-journey/healthcare` },
+              { icon: HeartPulse, name: "Healthcare", tagline: "GP surgeries, outpatient & primary care.", href: `${APP_SITE}/visitor-journey/healthcare` },
               { icon: Banknote, name: "Banks", tagline: "Premium service in every branch.", href: `${APP_SITE}/visitor-journey/finance` },
-              { icon: Landmark, name: "County Councils", tagline: "Better citizen service, less bureaucracy.", href: `${APP_SITE}/visitor-journey/public-sector` },
-              { icon: Building2, name: "Public Services", tagline: "Motor tax, social welfare & state agencies.", href: `${APP_SITE}/visitor-journey/public-sector` },
+              { icon: Landmark, name: "Local Councils", tagline: "Better citizen service, less bureaucracy.", href: `${APP_SITE}/visitor-journey/public-sector` },
+              { icon: Building2, name: "Public Services", tagline: "DVLA, DWP, HMRC & central government.", href: `${APP_SITE}/visitor-journey/public-sector` },
             ].map((s) => (
               <a key={s.name} href={s.href} target="_blank" rel="noopener"
                 className="group rounded-xl border border-border bg-card p-6 shadow-card hover:shadow-elegant transition-all hover:-translate-y-1">
@@ -211,7 +209,7 @@ const Index = () => {
       <section id="how" className="py-20 md:py-28">
         <div className="container">
           <div className="max-w-2xl">
-            <Eyebrow>Conas a oibríonn sé · How it works</Eyebrow>
+            <Eyebrow>How it works</Eyebrow>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold">From arrival to feedback — automated.</h2>
           </div>
           <div className="mt-14 grid md:grid-cols-4 gap-6">
@@ -235,19 +233,20 @@ const Index = () => {
       <section className="py-20 md:py-28 bg-secondary/40 border-y border-border">
         <div className="container grid lg:grid-cols-2 gap-12">
           <div>
-            <Eyebrow>Buntáistí · Benefits</Eyebrow>
+            <Eyebrow>Benefits</Eyebrow>
             <h2 className="mt-3 text-3xl md:text-4xl font-bold">Faster service. Happier visitors. Smarter operations.</h2>
             <p className="mt-4 text-muted-foreground text-lg">
-              Designed and supported in Ireland, with bilingual interfaces and GDPR-ready hosting.
+              Designed and supported in the UK, with UK GDPR-ready hosting and dedicated London-based account
+              management.
             </p>
           </div>
           <ul className="space-y-4">
             {[
-              "Reduce wait times across every location in Ireland",
-              "Bilingual (English / Gaeilge) interface and call-outs",
-              "GDPR-compliant, hosted on EU infrastructure",
+              "Reduce wait times across every location in the UK",
+              "Clear, accessible interface and audio call-outs",
+              "UK GDPR-compliant, hosted on UK/EU infrastructure",
               "Real-time data for managers and head office",
-              "Local Irish support team — phone, email & on-site",
+              "Local UK support team — phone, email & on-site",
             ].map((b) => (
               <li key={b} className="flex gap-3 items-start rounded-xl border border-border bg-card p-4 shadow-card">
                 <div className="h-6 w-6 rounded-md gradient-brand grid place-items-center shrink-0">
@@ -267,13 +266,13 @@ const Index = () => {
             <div className="absolute inset-0 grid-bg opacity-20" />
             <div className="relative">
               <div className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 bg-primary-foreground/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
-                🇮🇪 Déanta in Éirinn
+                🇬🇧 Built for the UK
               </div>
               <h2 className="mt-4 text-3xl md:text-5xl font-bold text-primary-foreground max-w-3xl mx-auto">
                 See QFusion in action.
               </h2>
               <p className="mt-4 text-primary-foreground/85 text-lg max-w-xl mx-auto">
-                Book a 20-minute demo with our Ireland team and see how QFusion transforms your customer flow.
+                Book a 20-minute demo with our UK team and see how QFusion transforms your customer flow.
               </p>
               <div className="mt-8 flex flex-wrap gap-3 justify-center">
                 <Button size="lg" variant="secondary" asChild>
@@ -294,8 +293,8 @@ const Index = () => {
           <div className="md:col-span-2">
             <img src={logo} alt="QFusion" className="h-9 w-auto" />
             <p className="mt-4 text-sm text-muted-foreground max-w-sm">
-              QFusion Ireland — the Customer Flow Platform for Irish hospitals, banks, councils and public services.
-              A product by Interactive Displays Ireland.
+              QFusion UK — the Customer Flow Platform for UK hospitals, NHS trusts, banks, councils and public
+              services. A product by Interactive Displays UK.
             </p>
           </div>
           <div>
@@ -308,23 +307,40 @@ const Index = () => {
             </ul>
           </div>
           <div>
-            <div className="text-sm font-semibold mb-3">Contact · Teagmháil</div>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Interactive Displays Ireland</li>
-              <li><a className="hover:text-foreground" href={CONTACT_URL} target="_blank" rel="noopener">Contact form ↗</a></li>
-              <li><a className="hover:text-foreground" href="mailto:hello@qfusion.ie">hello@qfusion.ie</a></li>
-              <li><a className="hover:text-foreground" href="tel:+353449672855">+353 44 967 2855</a></li>
-
-            </ul>
+            <div className="text-sm font-semibold mb-3">Contact us</div>
+            <div className="space-y-5 text-sm text-muted-foreground">
+              <div>
+                <div className="flex items-center gap-2 font-semibold text-foreground">
+                  <span aria-hidden>🇬🇧</span> United Kingdom
+                </div>
+                <ul className="mt-2 space-y-1">
+                  <li><a className="hover:text-foreground" href="mailto:sales@interactivedisplaysuk.com">sales@interactivedisplaysuk.com</a></li>
+                  <li><a className="hover:text-foreground" href="tel:+442033186379">+44 203 3186379</a></li>
+                  <li>167-169 Great Portland Street</li>
+                  <li>Fifth Floor, London, W1W 5PF</li>
+                </ul>
+              </div>
+              <div>
+                <div className="flex items-center gap-2 font-semibold text-foreground">
+                  <span aria-hidden>🇮🇪</span> Ireland
+                </div>
+                <ul className="mt-2 space-y-1">
+                  <li><a className="hover:text-foreground" href="mailto:sales@interactivedisplays.ie">sales@interactivedisplays.ie</a></li>
+                  <li><a className="hover:text-foreground" href="tel:+353449672855">+353 44 967 2855</a></li>
+                  <li>Dromone, Oldcastle</li>
+                  <li>Co Meath, A82E0W4</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div className="border-t border-border">
           <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
             <div className="flex items-center gap-2">
               <img src={mark} alt="" className="h-5 w-5" />
-              © {new Date().getFullYear()} QFusion Ireland. All rights reserved.
+              © {new Date().getFullYear()} QFusion UK. All rights reserved.
             </div>
-            <div>🇮🇪 Déanta in Éirinn · Made in Ireland</div>
+            <div>🇬🇧 Built for the United Kingdom</div>
           </div>
         </div>
       </footer>
