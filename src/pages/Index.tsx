@@ -50,13 +50,20 @@ const Index = () => {
             </a>
           </nav>
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="sm" asChild className="hidden lg:inline-flex">
-              <a href={CONTACT_URL} target="_blank" rel="noopener">Talk to sales</a>
-            </Button>
-            <Button size="sm" variant="brand" asChild>
-              <a href={DEMO_URL} target="_blank" rel="noopener">Book demo <ArrowRight className="ml-1 h-4 w-4" /></a>
-            </Button>
+            <ContactFormDialog
+              type="contact"
+              trigger={<Button variant="ghost" size="sm" className="hidden lg:inline-flex">Talk to sales</Button>}
+            />
+            <ContactFormDialog
+              type="contact"
+              trigger={
+                <Button size="sm" variant="brand">
+                  Book demo <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
+              }
+            />
           </div>
+
         </div>
       </header>
 
@@ -85,13 +92,19 @@ const Index = () => {
                 <Stat value="100%" label="Visibility" />
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button size="lg" variant="brand" asChild>
-                  <a href={DEMO_URL} target="_blank" rel="noopener">Book a demo <ArrowRight className="ml-1 h-4 w-4" /></a>
-                </Button>
+                <ContactFormDialog
+                  type="contact"
+                  trigger={
+                    <Button size="lg" variant="brand">
+                      Book a demo <ArrowRight className="ml-1 h-4 w-4" />
+                    </Button>
+                  }
+                />
                 <Button size="lg" variant="outline" asChild>
                   <a href="#features">See features</a>
                 </Button>
               </div>
+
               <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2"><Cloud className="h-4 w-4" /> Cloud-based</div>
                 <div className="flex items-center gap-2"><Shield className="h-4 w-4" /> HIPAA &amp; CCPA ready</div>
