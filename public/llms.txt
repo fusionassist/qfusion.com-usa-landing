@@ -1,0 +1,30 @@
+# QFusion UK
+
+> QFusion UK is a queue management and customer flow platform for NHS trusts, banks, local councils and public services across the United Kingdom — covering online appointments, digital ticketing, reception check-in, live displays and customer feedback.
+
+QFusion UK is delivered by Interactive Displays UK. The platform helps UK organisations cut wait times, manage visitor flow across multiple sites, and report on service performance from a single cloud dashboard.
+
+## Pages
+
+- [Home](/): QFusion UK overview, features, industries served, reseller programme and demo booking.
+
+## Visitor Journey (Industries)
+
+- [Healthcare & NHS](/visitor-journey/healthcare): Queue management and patient flow for NHS trusts, hospitals and GP surgeries.
+- [Retail](/visitor-journey/retail): Customer flow and service desk queuing for UK retail.
+- [Public Sector & Councils](/visitor-journey/public-sector): Visitor management for UK local councils and public services.
+- [Finance & Banking](/visitor-journey/finance): Branch queuing and appointment booking for UK banks.
+- [Corporate](/visitor-journey/corporate): Reception and visitor management for corporate offices.
+
+## Visitor Services (Product Modules)
+
+- [Queue Management](/visitor-services/queue-management): Virtual and physical queue management with live displays.
+- [Customer Counting](/visitor-services/customer-counting): People counting and footfall analytics.
+- [Satisfaction Survey](/visitor-services/satisfaction-survey): Real-time customer feedback collection.
+- [Corporate Reception](/visitor-services/corporate-reception): Visitor check-in and reception management.
+- [Online Appointments](/visitor-services/online-appointments): Self-service appointment booking.
+
+## Optional
+
+- [Reseller Programme](/#resellers): Become a QFusion UK reseller — for digital signage, ICT and traditional signage companies.
+- [Book a Demo](/#demo): Request a 20-minute tailored demo.
