@@ -8,6 +8,7 @@ import {
   ArrowRight, CalendarCheck, ClipboardList, MonitorSmartphone, Star, Ticket,
   Users, Check, Zap, BarChart3, Shield, Cloud,
   Stethoscope, HeartPulse, Banknote, Landmark, Building2,
+  Handshake, TrendingUp, Headphones, PoundSterling, Layers, Briefcase,
 } from "lucide-react";
 
 
@@ -57,6 +58,7 @@ const Index = () => {
           <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-muted-foreground">
             <a href="#features" className="hover:text-foreground transition-colors">Features</a>
             <a href="#sectors" className="hover:text-foreground transition-colors">Sectors</a>
+            <a href="#resellers" className="hover:text-foreground transition-colors">Resellers</a>
             <a href="#how" className="hover:text-foreground transition-colors">How it works</a>
             <a href={`${APP_SITE}/visitor-services/queue-management`} target="_blank" rel="noopener" className="hover:text-foreground transition-colors">
               More on qfusion.app ↗
@@ -272,6 +274,107 @@ const Index = () => {
           </ul>
         </div>
       </section>
+
+      {/* RESELLERS */}
+      <section id="resellers" className="py-20 md:py-28">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div>
+              <Eyebrow>Partner Programme</Eyebrow>
+              <h2 className="mt-3 text-3xl md:text-4xl font-bold">
+                Resellers welcome. <span className="text-gradient">Become a QFusion partner.</span>
+              </h2>
+              <p className="mt-4 text-muted-foreground text-lg">
+                Built for UK digital signage companies, ICT &amp; AV integrators, traditional signage firms,
+                managed-service providers and reception/visitor-management specialists. Add a high-margin SaaS
+                product to your line-up, without rebuilding your stack.
+              </p>
+              <div className="mt-6 grid grid-cols-3 gap-3 max-w-md">
+                <Stat value="30%+" label="Reseller margin" />
+                <Stat value="2 wks" label="To first sale" />
+                <Stat value="UK" label="Local support" />
+              </div>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button size="lg" variant="brand" asChild>
+                  <a href={CONTACT_URL} target="_blank" rel="noopener">
+                    Become a reseller <ArrowRight className="ml-1 h-4 w-4" />
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" asChild>
+                  <a href="tel:+442033186379">Call +44 203 3186379</a>
+                </Button>
+              </div>
+
+              <div className="mt-10">
+                <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  Ideal partners
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {[
+                    "Digital signage companies",
+                    "ICT & AV integrators",
+                    "Traditional signage firms",
+                    "Managed service providers",
+                    "Reception & visitor specialists",
+                    "Healthcare IT resellers",
+                  ].map((p) => (
+                    <span key={p} className="rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
+                      {p}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-5">
+              {[
+                {
+                  icon: PoundSterling,
+                  title: "Recurring revenue",
+                  desc: "Tiered reseller pricing with healthy margins on every licence, kiosk and renewal — month after month.",
+                },
+                {
+                  icon: Layers,
+                  title: "Add-on, not rip-and-replace",
+                  desc: "Sits alongside your existing signage, AV and IT projects. Sell QFusion into your installed base.",
+                },
+                {
+                  icon: Briefcase,
+                  title: "White-label ready",
+                  desc: "Branded kiosks, displays and customer portals — present QFusion as part of your own solution.",
+                },
+                {
+                  icon: TrendingUp,
+                  title: "Sales enablement",
+                  desc: "Decks, demo environments, ROI calculators and joint pitches with our UK team for the deals that matter.",
+                },
+                {
+                  icon: Headphones,
+                  title: "UK technical support",
+                  desc: "Tier-2/3 support, onboarding and installation training so your team delivers with confidence.",
+                },
+                {
+                  icon: Handshake,
+                  title: "Deal protection",
+                  desc: "Registered opportunities are protected — we work with you, not around you.",
+                },
+              ].map((b) => (
+                <div
+                  key={b.title}
+                  className="rounded-2xl border border-border bg-card p-6 shadow-card hover:shadow-elegant transition-all hover:-translate-y-1"
+                >
+                  <div className="h-11 w-11 rounded-xl gradient-brand grid place-items-center shadow-glow">
+                    <b.icon className="h-5 w-5 text-primary-foreground" />
+                  </div>
+                  <div className="mt-5 font-semibold">{b.title}</div>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* CTA */}
       <section id="demo" className="py-20 md:py-28">
