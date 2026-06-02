@@ -280,7 +280,7 @@ const Index = () => {
             <div className="absolute inset-0 grid-bg opacity-20" />
             <div className="relative">
               <div className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 bg-primary-foreground/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
-                🇬🇧 Built for the UK
+                <UkFlag /> Built for the UK
               </div>
               <h2 className="mt-4 text-3xl md:text-5xl font-bold text-primary-foreground max-w-3xl mx-auto">
                 See QFusion in action.
@@ -325,7 +325,7 @@ const Index = () => {
             <div className="space-y-5 text-sm text-muted-foreground">
               <div>
                 <div className="flex items-center gap-2 font-semibold text-foreground">
-                  <span aria-hidden>🇬🇧</span> United Kingdom
+                  <UkFlag /> United Kingdom
                 </div>
                 <ul className="mt-2 space-y-1">
                   <li><a className="hover:text-foreground" href="mailto:sales@interactivedisplaysuk.com">sales@interactivedisplaysuk.com</a></li>
@@ -336,7 +336,7 @@ const Index = () => {
               </div>
               <div>
                 <div className="flex items-center gap-2 font-semibold text-foreground">
-                  <span aria-hidden>🇮🇪</span> Ireland
+                  <IeFlag /> Ireland
                 </div>
                 <ul className="mt-2 space-y-1">
                   <li><a className="hover:text-foreground" href="mailto:sales@interactivedisplays.ie">sales@interactivedisplays.ie</a></li>
@@ -354,7 +354,7 @@ const Index = () => {
               <img src={mark} alt="" className="h-5 w-5" />
               © {new Date().getFullYear()} QFusion UK. All rights reserved.
             </div>
-            <div>🇬🇧 Built for the United Kingdom</div>
+            <div className="flex items-center gap-2"><UkFlag /> Built for the United Kingdom</div>
           </div>
         </div>
       </footer>
