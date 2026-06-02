@@ -58,6 +58,7 @@ const Index = () => {
           <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-muted-foreground">
             <a href="#features" className="hover:text-foreground transition-colors">Features</a>
             <a href="#sectors" className="hover:text-foreground transition-colors">Sectors</a>
+            <a href="#resellers" className="hover:text-foreground transition-colors">Resellers</a>
             <a href="#how" className="hover:text-foreground transition-colors">How it works</a>
             <a href={`${APP_SITE}/visitor-services/queue-management`} target="_blank" rel="noopener" className="hover:text-foreground transition-colors">
               More on qfusion.app ↗
