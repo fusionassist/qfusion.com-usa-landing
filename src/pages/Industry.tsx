@@ -2,28 +2,36 @@ import SiteNav from "@/components/SiteNav";
 import { Link, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import logo from "@/assets/qfusion-logo.png";
 import { getIndustry, industries } from "@/data/industries";
 import NotFound from "./NotFound";
-import { useEffect } from "react";
+
+const SITE = "https://qfusion.co.uk";
 
 const Industry = () => {
   const { slug = "" } = useParams();
   const industry = getIndustry(slug);
 
-  useEffect(() => {
-    if (industry) {
-      document.title = `${industry.name} – QFusion Customer Flow Platform`;
-      const meta = document.querySelector('meta[name="description"]');
-      if (meta) meta.setAttribute("content", `${industry.name}: ${industry.tagline} — QFusion improves customer flow with queue management, appointments, check-ins and feedback.`);
-    }
-  }, [industry]);
-
   if (!industry) return <NotFound />;
   const Icon = industry.icon;
+  const pageTitle = `${industry.name} – QFusion Customer Flow Platform`;
+  const pageDesc = `${industry.name}: ${industry.tagline} — QFusion improves customer flow with queue management, appointments, check-ins and feedback.`;
+  const pageUrl = `${SITE}/visitor-journey/${industry.slug}`;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Helmet htmlAttributes={{ lang: "en-GB" }}>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDesc} />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDesc} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDesc} />
+      </Helmet>
       {/* NAV */}
       <header className="sticky top-0 z-50 glass border-b border-border/60">
         <div className="container flex h-16 items-center justify-between">
