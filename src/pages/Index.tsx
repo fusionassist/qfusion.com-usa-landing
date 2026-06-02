@@ -16,14 +16,9 @@ const CONTACT_URL = `${APP_SITE}/#contact`;
 const DEMO_URL = `${APP_SITE}/#contact`;
 
 const UkFlag = () => (
-  <span aria-hidden className="inline-flex h-3 w-[18px] overflow-hidden rounded-[1px] border border-border/60 bg-[#012169] relative">
-    {/* simplified Union Jack */}
-    <span className="absolute inset-0" style={{
-      background:
-        "linear-gradient(45deg, transparent 45%, #fff 45%, #fff 55%, transparent 55%), linear-gradient(-45deg, transparent 45%, #fff 45%, #fff 55%, transparent 55%), linear-gradient(#fff, #fff) center/100% 28% no-repeat, linear-gradient(#fff, #fff) center/28% 100% no-repeat, linear-gradient(#C8102E, #C8102E) center/100% 14% no-repeat, linear-gradient(#C8102E, #C8102E) center/14% 100% no-repeat, #012169",
-    }} />
-  </span>
+  <span aria-hidden className="text-sm leading-none">🇬🇧</span>
 );
+
 
 const Index = () => {
   return (
