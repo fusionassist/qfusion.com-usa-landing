@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import SeoHead from "@/components/SeoHead";
+import { ContactFormDialog } from "@/components/ContactForms";
 
 import logo from "@/assets/qfusion-logo.png";
 import mark from "@/assets/qfusion-mark.png";
@@ -8,13 +9,12 @@ import {
   ArrowRight, CalendarCheck, ClipboardList, MonitorSmartphone, Star, Ticket,
   Users, Check, Zap, BarChart3, Shield, Cloud,
   Stethoscope, HeartPulse, Banknote, Landmark, Building2,
-  Handshake, TrendingUp, Headphones, DollarSign, Layers, Briefcase,
+  Handshake, TrendingUp, Headphones, DollarSign, Layers, Briefcase, Mail,
 } from "lucide-react";
 
 
 const APP_SITE = "https://qfusion.app";
-const CONTACT_URL = `${APP_SITE}/#contact`;
-const DEMO_URL = `${APP_SITE}/#contact`;
+
 
 const UsFlag = ({ className = "" }: { className?: string }) => (
   <svg aria-hidden viewBox="0 0 60 30" className={`inline-block h-3 w-[18px] rounded-[1px] border border-border/60 ${className}`}>
@@ -50,13 +50,20 @@ const Index = () => {
             </a>
           </nav>
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="sm" asChild className="hidden lg:inline-flex">
-              <a href={CONTACT_URL} target="_blank" rel="noopener">Talk to sales</a>
-            </Button>
-            <Button size="sm" variant="brand" asChild>
-              <a href={DEMO_URL} target="_blank" rel="noopener">Book demo <ArrowRight className="ml-1 h-4 w-4" /></a>
-            </Button>
+            <ContactFormDialog
+              type="contact"
+              trigger={<Button variant="ghost" size="sm" className="hidden lg:inline-flex">Talk to sales</Button>}
+            />
+            <ContactFormDialog
+              type="contact"
+              trigger={
+                <Button size="sm" variant="brand">
+                  Book demo <ArrowRight className="ml-1 h-4 w-4" />
+                </Button>
+              }
+            />
           </div>
+
         </div>
       </header>
 
@@ -85,13 +92,19 @@ const Index = () => {
                 <Stat value="100%" label="Visibility" />
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button size="lg" variant="brand" asChild>
-                  <a href={DEMO_URL} target="_blank" rel="noopener">Book a demo <ArrowRight className="ml-1 h-4 w-4" /></a>
-                </Button>
+                <ContactFormDialog
+                  type="contact"
+                  trigger={
+                    <Button size="lg" variant="brand">
+                      Book a demo <ArrowRight className="ml-1 h-4 w-4" />
+                    </Button>
+                  }
+                />
                 <Button size="lg" variant="outline" asChild>
                   <a href="#features">See features</a>
                 </Button>
               </div>
+
               <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2"><Cloud className="h-4 w-4" /> Cloud-based</div>
                 <div className="flex items-center gap-2"><Shield className="h-4 w-4" /> HIPAA &amp; CCPA ready</div>
@@ -138,10 +151,16 @@ const Index = () => {
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3 text-sm">
               <span className="text-muted-foreground">Get in touch</span>
-              <Button size="sm" variant="brand" asChild>
-                <a href={CONTACT_URL} target="_blank" rel="noopener">Contact us <ArrowRight className="ml-1 h-3.5 w-3.5" /></a>
-              </Button>
+              <ContactFormDialog
+                type="contact"
+                trigger={
+                  <Button size="sm" variant="brand">
+                    Contact us <ArrowRight className="ml-1 h-3.5 w-3.5" />
+                  </Button>
+                }
+              />
             </div>
+
           </div>
 
           <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -271,15 +290,20 @@ const Index = () => {
                 to your line-up, without rebuilding your stack.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button size="lg" variant="brand" asChild>
-                  <a href={CONTACT_URL} target="_blank" rel="noopener">
-                    Become a reseller <ArrowRight className="ml-1 h-4 w-4" />
-                  </a>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <a href={CONTACT_URL} target="_blank" rel="noopener">Talk to partner sales</a>
-                </Button>
+                <ContactFormDialog
+                  type="reseller"
+                  trigger={
+                    <Button size="lg" variant="brand">
+                      Become a reseller <ArrowRight className="ml-1 h-4 w-4" />
+                    </Button>
+                  }
+                />
+                <ContactFormDialog
+                  type="contact"
+                  trigger={<Button size="lg" variant="outline">Talk to partner sales</Button>}
+                />
               </div>
+
 
               <div className="mt-10">
                 <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -368,13 +392,28 @@ const Index = () => {
                 Book a 20-minute demo with our US team and see how QFusion transforms your customer flow.
               </p>
               <div className="mt-8 flex flex-wrap gap-3 justify-center">
-                <Button size="lg" variant="secondary" asChild>
-                  <a href={DEMO_URL} target="_blank" rel="noopener">Book demo <ArrowRight className="ml-1 h-4 w-4" /></a>
-                </Button>
-                <Button size="lg" variant="outline" className="bg-transparent text-primary-foreground border-primary-foreground/40 hover:bg-primary-foreground/10 hover:text-primary-foreground" asChild>
-                  <a href={CONTACT_URL} target="_blank" rel="noopener">Talk to sales</a>
-                </Button>
+                <ContactFormDialog
+                  type="contact"
+                  trigger={
+                    <Button size="lg" variant="secondary">
+                      Book demo <ArrowRight className="ml-1 h-4 w-4" />
+                    </Button>
+                  }
+                />
+                <ContactFormDialog
+                  type="contact"
+                  trigger={
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="bg-transparent text-primary-foreground border-primary-foreground/40 hover:bg-primary-foreground/10 hover:text-primary-foreground"
+                    >
+                      Talk to sales
+                    </Button>
+                  }
+                />
               </div>
+
             </div>
           </div>
         </div>
@@ -407,17 +446,32 @@ const Index = () => {
                   <UsFlag /> United States
                 </div>
                 <ul className="mt-2 space-y-1">
-                  <li>
-                    <a className="hover:text-foreground" href={CONTACT_URL} target="_blank" rel="noopener">
-                      Contact our US team
+                  <li className="flex items-center gap-2">
+                    <Mail className="h-3.5 w-3.5" />
+                    <a className="hover:text-foreground" href="mailto:sales@queuefusion.com">
+                      sales@queuefusion.com
                     </a>
                   </li>
                   <li>
-                    <a className="hover:text-foreground" href={DEMO_URL} target="_blank" rel="noopener">
-                      Book a demo
-                    </a>
+                    <ContactFormDialog
+                      type="contact"
+                      trigger={<button className="hover:text-foreground text-left">Contact our US team</button>}
+                    />
+                  </li>
+                  <li>
+                    <ContactFormDialog
+                      type="contact"
+                      trigger={<button className="hover:text-foreground text-left">Book a demo</button>}
+                    />
+                  </li>
+                  <li>
+                    <ContactFormDialog
+                      type="reseller"
+                      trigger={<button className="hover:text-foreground text-left">Become a partner</button>}
+                    />
                   </li>
                 </ul>
+
               </div>
             </div>
           </div>
