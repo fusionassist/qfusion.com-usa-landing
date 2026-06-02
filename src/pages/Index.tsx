@@ -8,6 +8,7 @@ import {
   ArrowRight, CalendarCheck, ClipboardList, MonitorSmartphone, Star, Ticket,
   Users, Check, Zap, BarChart3, Shield, Cloud,
   Stethoscope, HeartPulse, Banknote, Landmark, Building2,
+  Handshake, TrendingUp, Headphones, PoundSterling, Layers, Briefcase,
 } from "lucide-react";
 
 
