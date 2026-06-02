@@ -25,7 +25,7 @@ export const industries: Industry[] = [
     tagline: "Calmer waiting rooms, faster patient flow.",
     image: healthcareImg,
     intro:
-      "From hospitals and HSE facilities to GP clinics and outpatient departments, QFusion organises every patient interaction — from arrival to consultation to follow-up — so staff can focus on care, not crowd control.",
+      "From NHS hospitals and trusts to GP surgeries and outpatient departments, QFusion organises every patient interaction — from arrival to consultation to follow-up — so staff can focus on care, not crowd control.",
     challenges: [
       { t: "Overcrowded waiting rooms", d: "Patients clustered around reception with no clear order." },
       { t: "Missed appointments", d: "No-shows and double bookings disrupt clinical schedules." },
