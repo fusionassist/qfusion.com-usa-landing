@@ -289,11 +289,6 @@ const Index = () => {
                 managed-service providers and reception/visitor-management specialists. Add a high-margin SaaS
                 product to your line-up, without rebuilding your stack.
               </p>
-              <div className="mt-6 grid grid-cols-3 gap-3 max-w-md">
-                <Stat value="30%+" label="Reseller margin" />
-                <Stat value="2 wks" label="To first sale" />
-                <Stat value="UK" label="Local support" />
-              </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button size="lg" variant="brand" asChild>
                   <a href={CONTACT_URL} target="_blank" rel="noopener">
