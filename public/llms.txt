@@ -1,19 +1,19 @@
-# QFusion UK
+# QueueFusion
 
-> QFusion UK is a queue management and customer flow platform for NHS trusts, banks, local councils and public services across the United Kingdom — covering online appointments, digital ticketing, reception check-in, live displays and customer feedback.
+> QueueFusion is a queue management and customer flow platform for US hospitals, health systems, banks, credit unions, city & county government, DMV offices and federal agencies — covering online appointments, digital ticketing, reception check-in, live displays and customer feedback.
 
-QFusion UK is delivered by Interactive Displays UK. The platform helps UK organisations cut wait times, manage visitor flow across multiple sites, and report on service performance from a single cloud dashboard.
+QueueFusion helps US organizations cut wait times, manage visitor flow across multiple sites, and report on service performance from a single cloud dashboard. HIPAA-ready, CCPA compliant, hosted in the US.
 
 ## Pages
 
-- [Home](/): QFusion UK overview, features, industries served, reseller programme and demo booking.
+- [Home](/): QueueFusion overview, features, industries served, partner program and demo booking.
 
 ## Visitor Journey (Industries)
 
-- [Healthcare & NHS](/visitor-journey/healthcare): Queue management and patient flow for NHS trusts, hospitals and GP surgeries.
-- [Retail](/visitor-journey/retail): Customer flow and service desk queuing for UK retail.
-- [Public Sector & Councils](/visitor-journey/public-sector): Visitor management for UK local councils and public services.
-- [Finance & Banking](/visitor-journey/finance): Branch queuing and appointment booking for UK banks.
+- [Healthcare & Hospitals](/visitor-journey/healthcare): Queue management and patient flow for US hospitals, health systems, clinics and urgent care.
+- [Retail](/visitor-journey/retail): Customer flow and service desk queuing for US retail.
+- [Public Sector & Government](/visitor-journey/public-sector): Visitor management for US city & county government, DMV and federal agencies.
+- [Finance & Banking](/visitor-journey/finance): Branch queuing and appointment booking for US banks and credit unions.
 - [Corporate](/visitor-journey/corporate): Reception and visitor management for corporate offices.
 
 ## Visitor Services (Product Modules)
@@ -26,5 +26,5 @@ QFusion UK is delivered by Interactive Displays UK. The platform helps UK organi
 
 ## Optional
 
-- [Reseller Programme](/#resellers): Become a QFusion UK reseller — for digital signage, ICT and traditional signage companies.
+- [Partner Program](/#resellers): Become a QueueFusion reseller — for digital signage, AV/IT integrators and visitor-management firms.
 - [Book a Demo](/#demo): Request a 20-minute tailored demo.
