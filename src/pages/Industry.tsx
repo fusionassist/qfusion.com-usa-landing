@@ -7,7 +7,7 @@ import logo from "@/assets/qfusion-logo.png";
 import { getIndustry, industries } from "@/data/industries";
 import NotFound from "./NotFound";
 
-const SITE = "https://qfusion.co.uk";
+const SITE = "https://queuefusion.com";
 
 const Industry = () => {
   const { slug = "" } = useParams();
@@ -21,7 +21,7 @@ const Industry = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet htmlAttributes={{ lang: "en-GB" }}>
+      <Helmet htmlAttributes={{ lang: "en-US" }}>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
         <link rel="canonical" href={pageUrl} />

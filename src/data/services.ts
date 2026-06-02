@@ -106,10 +106,10 @@ export const services: Service[] = [
     tagline: "24/7 booking, verified check-in.",
     image: onlineAppointmentsImg,
     intro:
-      "Let customers book, reschedule, cancel and check in to appointments from anywhere — with secure API verification against your organisation's database to confirm identity at arrival.",
+      "Let customers book, reschedule, cancel and check in to appointments from anywhere — with secure API verification against your organization's database to confirm identity at arrival.",
     features: [
       { t: "Book from your website", d: "Embed appointment booking directly on your site — your calendar syncs automatically and customers self-serve 24/7." },
-      { t: "Identity verification", d: "API integration with your organisation's database looks up name, date of birth and reference to verify check-in." },
+      { t: "Identity verification", d: "API integration with your organization's database looks up name, date of birth and reference to verify check-in." },
       { t: "Smart routing", d: "Intelligent appointment routing matches each customer to the right service, advisor or department." },
       { t: "Reminders & video", d: "Automated SMS and email reminders cut no-shows; built-in videoconferencing for remote appointments." },
     ],

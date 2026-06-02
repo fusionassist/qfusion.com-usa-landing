@@ -1,4 +1,4 @@
-# QFusion UK — open to search engines and AI assistants.
+# QueueFusion — open to search engines and AI assistants.
 
 User-agent: Googlebot
 Allow: /
@@ -81,4 +81,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://qfusion.co.uk/sitemap.xml
+Sitemap: https://queuefusion.com/sitemap.xml

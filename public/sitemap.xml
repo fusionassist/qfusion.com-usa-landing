@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://qfusion.co.uk/</loc>
+    <loc>https://queuefusion.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://qfusion.co.uk/visitor-journey/healthcare</loc>
+    <loc>https://queuefusion.com/visitor-journey/healthcare</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qfusion.co.uk/visitor-journey/retail</loc>
+    <loc>https://queuefusion.com/visitor-journey/retail</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qfusion.co.uk/visitor-journey/public-sector</loc>
+    <loc>https://queuefusion.com/visitor-journey/public-sector</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qfusion.co.uk/visitor-journey/finance</loc>
+    <loc>https://queuefusion.com/visitor-journey/finance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qfusion.co.uk/visitor-journey/corporate</loc>
+    <loc>https://queuefusion.com/visitor-journey/corporate</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qfusion.co.uk/visitor-services/queue-management</loc>
+    <loc>https://queuefusion.com/visitor-services/queue-management</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://qfusion.co.uk/visitor-services/customer-counting</loc>
+    <loc>https://queuefusion.com/visitor-services/customer-counting</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://qfusion.co.uk/visitor-services/satisfaction-survey</loc>
+    <loc>https://queuefusion.com/visitor-services/satisfaction-survey</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://qfusion.co.uk/visitor-services/corporate-reception</loc>
+    <loc>https://queuefusion.com/visitor-services/corporate-reception</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://qfusion.co.uk/visitor-services/online-appointments</loc>
+    <loc>https://queuefusion.com/visitor-services/online-appointments</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
