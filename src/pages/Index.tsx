@@ -15,9 +15,28 @@ const APP_SITE = "https://qfusion.app";
 const CONTACT_URL = `${APP_SITE}/#contact`;
 const DEMO_URL = `${APP_SITE}/#contact`;
 
-const UkFlag = () => (
-  <span aria-hidden className="text-sm leading-none">🇬🇧</span>
+const UkFlag = ({ className = "" }: { className?: string }) => (
+  <svg aria-hidden viewBox="0 0 60 30" className={`inline-block h-3 w-[18px] rounded-[1px] border border-border/60 ${className}`}>
+    <clipPath id="uk-s"><path d="M0,0 v30 h60 v-30 z" /></clipPath>
+    <clipPath id="uk-t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" /></clipPath>
+    <g clipPath="url(#uk-s)">
+      <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
+      <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6" />
+      <path d="M0,0 L60,30 M60,0 L0,30" clipPath="url(#uk-t)" stroke="#C8102E" strokeWidth="4" />
+      <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10" />
+      <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" strokeWidth="6" />
+    </g>
+  </svg>
 );
+
+const IeFlag = ({ className = "" }: { className?: string }) => (
+  <span aria-hidden className={`inline-flex h-3 w-[18px] overflow-hidden rounded-[1px] border border-border/60 ${className}`}>
+    <span className="flex-1 bg-[#169B62]" />
+    <span className="flex-1 bg-white" />
+    <span className="flex-1 bg-[#FF883E]" />
+  </span>
+);
+
 
 
 const Index = () => {
