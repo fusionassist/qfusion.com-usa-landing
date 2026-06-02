@@ -7,7 +7,7 @@ import logo from "@/assets/qfusion-logo.png";
 import { getService, services } from "@/data/services";
 import NotFound from "./NotFound";
 
-const SITE = "https://qfusion.co.uk";
+const SITE = "https://queuefusion.com";
 
 const Service = () => {
   const { slug = "" } = useParams();
@@ -16,12 +16,12 @@ const Service = () => {
   if (!service) return <NotFound />;
   const Icon = service.icon;
   const pageTitle = `${service.name} – QFusion Visitor Services`;
-  const pageDesc = `${service.name}: ${service.tagline} — part of the QFusion Customer Flow Platform for UK organisations.`;
+  const pageDesc = `${service.name}: ${service.tagline} — part of the QueueFusion Customer Flow Platform for US organizations.`;
   const pageUrl = `${SITE}/visitor-services/${service.slug}`;
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet htmlAttributes={{ lang: "en-GB" }}>
+      <Helmet htmlAttributes={{ lang: "en-US" }}>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDesc} />
         <link rel="canonical" href={pageUrl} />
